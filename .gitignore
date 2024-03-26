@@ -1,1 +1,1 @@
-view/*/*.go
+/view/**/*.go
