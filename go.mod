@@ -1,4 +1,4 @@
-module github.com/wadzee/personal-website
+module radziramli
 
 go 1.22.1
 

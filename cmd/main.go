@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 
+	"radziramli/handler"
+
 	"github.com/labstack/echo/v4"
-	"github.com/wadzee/personal-website/handler"
 )
 
 type DB struct{}
@@ -13,9 +14,9 @@ func main() {
 	app := echo.New()
 	fmt.Println("it is working")
 
-	userHandler := handler.UserHandler{}
+	MainPage := handler.IndexPage{}
 
-	app.GET("/", userHandler.HandleUserShow)
-
+	app.GET("/", MainPage.RenderMainPage)
+	app.Static("/static/css", "static/css")
 	app.Logger.Fatal(app.Start(":3000"))
 }

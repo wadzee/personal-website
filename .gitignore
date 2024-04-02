@@ -1,1 +1,4 @@
-/view/**/*.go
+bin
+tmp
+public
+*.txt
