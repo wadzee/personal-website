@@ -17,6 +17,6 @@ func main() {
 	MainPage := handler.IndexPage{}
 
 	app.GET("/", MainPage.RenderMainPage)
-	app.Static("/static/css", "static/css")
+	app.Static("/public", "static")
 	app.Logger.Fatal(app.Start(":3000"))
 }

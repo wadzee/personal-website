@@ -7,5 +7,6 @@
     @apply bg-primary;
     @apply text-secondary;
     @apply scroll-smooth;
+    @apply font-Inter;
   }
 }

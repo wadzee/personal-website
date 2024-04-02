@@ -452,6 +452,7 @@ html {
   --tw-text-opacity: 1;
   color: rgb(238 240 229 / var(--tw-text-opacity));
   scroll-behavior: smooth;
+  font-family: Inter, sans-serif;
 }
 
 *, ::before, ::after {
@@ -601,4 +602,8 @@ html {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }

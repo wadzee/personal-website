@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./view/**/*.templ"],
   theme: {
+    fontFamily: {
+      Inter: ["Inter", "sans-serif"],
+    },
     container: {
       center: true,
     },
