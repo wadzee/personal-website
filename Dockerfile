@@ -10,7 +10,7 @@ FROM gcr.io/distroless/base-debian11 as final
 
 COPY --from=builder /server /server
 
-ENV PORT 8080
+ENV PORT 3000
 EXPOSE $PORT
 
 ENTRYPOINT ["/server"]
