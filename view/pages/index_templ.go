@@ -32,7 +32,7 @@ func Show() templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex justify-center items-center h-screen\"><div class=\"flex flex-col max-w-[350px] gap-8\"><div><h1>radziramli.com</h1><p>is currently under major construction!</p></div><p>Built entirely using ")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex justify-center items-center h-screen\"><div class=\"flex flex-col max-w-[350px] gap-8\"><div><h1>radziramli.com</h1><p>is currently under major construction!</p></div><p>Rebuilt entirely using ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

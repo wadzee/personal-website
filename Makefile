@@ -11,4 +11,3 @@ tailwind:
 build:
 	@templ generate
 	@npx tailwindcss build -i static/css/input.css -o static/css/output.css
-	@go build -o ./tmp/main ./cmd
