@@ -13,6 +13,9 @@ module.exports = {
       secondary: "#EEF0E5",
     },
     extend: {
+      cursor: {
+        goth: "url(/public/assets/goth.png), pointer",
+      },
       colors: {
         primary: "#163020",
         secondary: "#304D30",

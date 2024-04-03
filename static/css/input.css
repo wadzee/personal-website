@@ -5,8 +5,21 @@
 @layer base {
   html {
     @apply bg-primary;
-    @apply text-secondary;
+    @apply text-primary;
     @apply scroll-smooth;
     @apply font-Inter;
+  }
+
+  h1 {
+    @apply text-secondary;
+    @apply text-4xl;
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-secondary;
+    @apply hover:underline;
+    @apply underline-offset-4;
+    @apply decoration-2;
   }
 }

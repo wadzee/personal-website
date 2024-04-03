@@ -1,0 +1,10 @@
+package components
+
+type LinkProps struct {
+	Label string
+	Href  string
+}
+
+templ Link(props LinkProps) {
+	<a href={ templ.URL(props.Href) } target="_blank">{ props.Label }</a>
+}
