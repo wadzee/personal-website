@@ -17,8 +17,14 @@ FROM gcr.io/distroless/base-debian12 as final
 
 WORKDIR /app
 
-# Copy the built Go exec
+# Copy Go executable
 COPY --from=builder /build/main ./main
+
+# Copy static file
+COPY --from=builder /build/static ./static
+
+ENV PORT 3000
+EXPOSE $PORT
 
 # Run the app
 CMD [ "/app/main" ]
