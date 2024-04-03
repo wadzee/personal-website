@@ -6,13 +6,13 @@ import "radziramli/view/components/Link"
 templ HomePage() {
 	@layout.Main() {
 		<div class="flex justify-center items-center h-screen">
-			<div class="flex flex-col max-w-[350px] gap-8">
+			<div class="flex flex-col max-w-[500px] px-5 gap-8">
 				<div>
 					<h1>radziramli.com</h1>
 					<p>is currently under major construction!</p>
 				</div>
 				<p>
-					Rebuilt entirely using 
+					To be rebuilt entirely using 
 					@components.Link(components.LinkProps{
 						Label: "Golang",
 						Href:  "https://go.dev/",
@@ -34,6 +34,19 @@ templ HomePage() {
 					})
 					, 
 					the way to <span class="font-bold text-secondary cursor-goth">GOTH </span>stack.
+				</p>
+				<p>
+					Deployed using 
+					@components.Link(components.LinkProps{
+						Label: "Railway",
+						Href:  "https://railway.app/",
+					})
+					, powered by 
+					@components.Link(components.LinkProps{
+						Label: "Docker",
+						Href:  "https://www.docker.com/",
+					})
+					.
 				</p>
 			</div>
 		</div>

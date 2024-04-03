@@ -629,8 +629,8 @@ a {
   height: 100vh;
 }
 
-.max-w-\[350px\] {
-  max-width: 350px;
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .cursor-goth {
@@ -651,6 +651,11 @@ a {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .font-bold {
