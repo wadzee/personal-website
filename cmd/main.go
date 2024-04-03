@@ -2,7 +2,9 @@ package main
 
 import (
 	"context"
+	"embed"
 	"fmt"
+	"io/fs"
 	"net/http"
 	"os"
 	"os/signal"
@@ -12,10 +14,32 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+// func main() {
+// 	app := echo.New()
+// 	fmt.Println("it is working")
+
+// 	MainPage := handler.IndexPage{}
+
+// 	app.GET("/", MainPage.RenderMainPage)
+// 	app.Static("/public", "static")
+// 	app.Logger.Fatal(app.Start(":3000"))
+// }
+
+var static embed.FS
+
+func Static() http.Handler {
+	dist, err := fs.Sub(static, "static")
+	if err != nil {
+		panic(err)
+	}
+
+	return http.FileServer(http.FS(dist))
+}
+
 func main() {
 	e := echo.New()
+	e.GET("/public/*", echo.WrapHandler(http.StripPrefix("/static/", Static())))
 
-	e.Static("/public", "static")
 	// bind views to the server
 	handler.Routes(e)
 
